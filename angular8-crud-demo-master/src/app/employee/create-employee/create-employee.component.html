@@ -1,0 +1,67 @@
+<h3>Create Employee</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form [formGroup]="createEmployee" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">User Name</label>
+      <input type="text" class="form-control" formControlName="username" id="username" required [(ngModel)]="employee.username" name="username"
+      [ngClass]="{ 'is-invalid':(submitted || f.username.touched) && f.username.errors }">
+      <div *ngIf="(submitted ||f.username.touched )&& f.username.errors" class="invalid-feedback">
+        <div *ngIf="f.username.errors.required">username is required</div>
+        <div *ngIf="f.emailid.errors.username">username should be valid</div>
+    </div>
+    
+    </div>
+
+    <div class="form-group">
+      <label for="name">Surname Name</label>
+      <input type="text" class="form-control" formControlName="surname" id="surname" required [(ngModel)]="employee.surname" name="surname"
+      [ngClass]="{ 'is-invalid':(submitted || f.surname.touched) && f.surname.errors }">
+      <div *ngIf="(submitted ||f.surname.touched )&& f.surname.errors" class="invalid-feedback">
+        <div *ngIf="f.surname.errors.required">surname is required</div>
+        <div *ngIf="f.surname.errors.surname">surname should be valid</div>
+    </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email Id</label>
+      <input type="text" class="form-control" formControlName="emailid" id="emailid" required [(ngModel)]="employee.emailid" name="emailid"
+      [ngClass]="{ 'is-invalid':(submitted || f.emailid.touched) && f.emailid.errors }">
+      <div *ngIf="(submitted ||f.emailid.touched )&& f.emailid.errors" class="invalid-feedback">
+        <div *ngIf="f.emailid.errors.required">email is required</div>
+        <div *ngIf="f.emailid.errors.email">email should be valid</div>
+    </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Password</label>
+      <input type="text" class="form-control" formControlName="password" id="password" required [(ngModel)]="employee.password" name="password"
+      [ngClass]="{ 'is-invalid':(submitted || f.password.touched) && f.password.errors }">
+      <div *ngIf="(submitted ||f.password.touched )&& f.password.errors" class="invalid-feedback">
+        <div *ngIf="f.password.errors.required">password is required</div>
+        <div *ngIf="f.password.errors.password">password should be valid</div>
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="name">PIN Code</label>
+      <input type="text" class="form-control" formControlName="pincode" id="pincode" required [(ngModel)]="employee.pincode" name="pincode"
+    [ngClass]="{ 'is-invalid':(submitted || f.pincode.touched) && f.pincode.errors }">
+      <div *ngIf="(submitted ||f.pincode.touched )&& f.pincode.errors" class="invalid-feedback">
+        <div *ngIf="f.pincode.errors.required">pincode is required</div>
+        <div *ngIf="f.pincode.errors.pincode">pincode should be valid</div>
+    </div>
+   
+    </div>
+	
+	 <div class="form-group">
+      <label for="name">Dateofbirth</label>
+      <input type="text" class="form-control" formControlName="dob" id="dateofbirth" required [(ngModel)]="employee.dateofbirth" name="dateofbirth">
+    </div>
+    <div class="form-group">
+      <label for="name">Joiningdate</label>
+      <input type="text" class="form-control" formControlName="joiningDate" id="joiningdate" required [(ngModel)]="employee.joiningdate" name="joiningdate">
+    </div>
+
+    <button class="btn btn-success">Submit</button>
+  </form>
+</div>
+

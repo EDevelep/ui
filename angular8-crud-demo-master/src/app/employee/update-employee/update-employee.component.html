@@ -1,0 +1,40 @@
+<h3>Update Employee</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">User Name</label>
+      <input type="text" class="form-control" id="username" required [(ngModel)]="employee.username" name="username">
+    </div>
+
+    <div class="form-group">
+     </div>
+	
+	 <div class="form-group">
+      <label for="name">Dateofbirth</label>
+      <input type="text" class="form-control" id="dateofbirth" required [(ngModel)]="employee.dateofbirth" name="dateofbirth">
+    </div>
+    <div class="form-group">
+      <label for="name">Joiningdate</label>
+      <input type="text" class="form-control" id="joiningdate" required [(ngModel)]="employee.joiningdate" name="joiningdate">
+    </div> 
+    <div class="form-group">
+    <label for="name">Surname Name</label>
+      <input type="text" class="form-control" id="surname" required [(ngModel)]="employee.surname" name="surname">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email Id</label>
+      <input type="text" class="form-control" id="emailisd" required [(ngModel)]="employee.emailid" name="emailid">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Password</label>
+      <input type="text" class="form-control" id="password" required [(ngModel)]="employee.password" name="password">
+    </div>
+    <div class="form-group">
+      <label for="name">PIN Code</label>
+      <input type="text" class="form-control" id="pincode" required [(ngModel)]="employee.pincode" name="pincode">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

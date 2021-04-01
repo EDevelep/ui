@@ -1,0 +1,47 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Employee List</h2>
+  </div>
+  
+ 
+
+  <div class="panel-body">
+    <table id="example" class="table table-striped table-bordered table-sm row-border hover" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>User name</th>
+          <th> Surname Name</th>
+          <th>Email</th>
+          <th> Password</th>
+          <th> PIN Code</th>
+          <th> Active</th>
+          <th> Dateofbirth</th>
+          <th> Joiningdate</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{employee.username}}</td>
+          <td>{{employee.surname}}</td>
+          <td>{{employee.emailid}}</td>
+          <td>{{employee.password}}</td>
+          <td>{{employee.pincode}}</td>
+          <td>{{employee.active}}</td>
+          <td>{{employee.dateofbirth}}</td>
+          <td>{{employee.joiningdate}}</td>
+          
+          <td><button (click)="deleteEmployee(employee.userid)" class="btn btn-danger" style="margin-left:5px">Delete</button>
+              <button (click)="updateEmployee(employee.userid)" class="btn btn-info" style="margin-left:5px">Update</button>
+              <button (click)="employeeDetails(employee.userid)" class="btn btn-info" style="margin-left:5px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+  
+  
